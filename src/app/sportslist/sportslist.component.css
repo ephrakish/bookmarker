@@ -1,0 +1,53 @@
+.sports-list-contents {
+    background-color: #0F2244;
+    border-radius: 5px;
+    padding: 0em;
+}
+
+.sports-list {
+    color: #D2D2D2;
+    padding-left: 1rem;
+    font-size: small;
+}
+
+hr {
+    border-color: rgba(255, 255, 255, 0.301);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 90%;
+}
+
+#bottom-game {
+    border-color: rgba(255, 255, 255, 0.301);
+    margin-top: 0px;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+#game {
+    border-color: #FF237D;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 50%;
+    border-width: 2px;
+    
+}
+
+#games {
+    color: #FF237D;
+    padding-left: .3em;
+    padding-right: .3em;
+    padding-top: .3em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sports-lst-tle {
+    border-bottom: 2px solid #FF237D;
+    padding-bottom: .1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    
+}

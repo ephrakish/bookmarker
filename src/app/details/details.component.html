@@ -1,0 +1,420 @@
+<div class="details" *ngFor="let bets of betss">
+    <div class="details-head">
+        <div class="p-d-flex p-jc-center">
+            <div><span class="title">{{bets.team1}}</span>   vs   <span class="title">{{bets.team2}}</span></div>
+        </div>
+        <div class="p-d-flex p-jc-center p-mt-1">
+            <div>{{bets.date}}</div>
+        </div>
+        <div class="p-d-flex p-jc-center p-mt-1">
+            <div>{{bets.time}}</div>
+        </div>
+    </div>
+</div>
+<div class="details p-mt-2" *ngFor="let bets of betss">
+    <div class="details-content">
+        <div class="details-indv-content">
+            <div class="cont-head">
+                <span>
+                    Threeway
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let three of bets.three" class="p-d-flex p-jc-between bet cont" (click)=selectedBet(three)>
+                    <div>{{three.team}}</div>
+                    <div>{{three.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Double chance
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let double of bets.doublechance" class="p-d-flex p-jc-between bet cont" (click)=selectedBet(double)>
+                    <div>{{double.team}}</div>
+                    <div>{{double.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Over/Under 0.5
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let over of bets.overunder05" class="p-d-flex p-jc-between bet" (click)=selectedBet(over)>
+                    <div>{{over.team}}</div>
+                    <div>{{over.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Over/Under 1.5
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let ou15 of bets.overunder15" class="p-d-flex p-jc-between bet" (click)=selectedBet(ou15)>
+                    <div>{{ou15.team}}</div>
+                    <div>{{ou15.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Over/Under 2.5
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let ou25 of bets.overunder25" class="p-d-flex p-jc-between bet" (click)=selectedBet(ou25)>
+                    <div>{{ou25.team}}</div>
+                    <div>{{ou25.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Over/Under 3.5
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let ou35 of bets.overunder35" class="p-d-flex p-jc-between bet" (click)=selectedBet(ou35)>
+                    <div>{{ou35.team}}</div>
+                    <div>{{ou35.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Over/Under 4.5
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let ou45 of bets.overunder45" class="p-d-flex p-jc-between bet" (click)=selectedBet(ou45)>
+                    <div>{{ou45.team}}</div>
+                    <div>{{ou45.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Both To Score
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let bts of bets.bothtoscore" class="p-d-flex p-jc-between bet" (click)=selectedBet(bts)>
+                    <div>{{bts.team}}</div>
+                    <div>{{bts.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Draw No Bet
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let dnb of bets.drawnobet" class="p-d-flex p-jc-between bet" (click)=selectedBet(dnb)>
+                    <div>{{dnb.team}}</div>
+                    <div>{{dnb.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Handicap -05
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let hc5 of bets.Handicap05" class="p-d-flex p-jc-between bet" (click)=selectedBet(hc5)>
+                    <div>{{hc5.team}}</div>
+                    <div>{{hc5.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    1X2 and Overs/Unders (Total 1.5)
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let ottaou15 of bets.onetimestwoandoverunder15" class="p-d-flex p-jc-between bet" (click)=selectedBet(ottaou15)>
+                    <div>{{ottaou15.team}}</div>
+                    <div>{{ottaou15.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    1X2 and Overs/Unders (Total 2.5)
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let ottaou25 of bets.onetimestwoandoverunder25" class="p-d-flex p-jc-between bet" (click)=selectedBet(ottaou25)>
+                    <div>{{ottaou25.team}}</div>
+                    <div>{{ottaou25.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    1X2 and Overs/Unders (Total 3.5)
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let ottaou35 of bets.onetimestwoandoverunder35" class="p-d-flex p-jc-between bet" (click)=selectedBet(ottaou35)>
+                    <div>{{ottaou35.team}}</div>
+                    <div>{{ottaou35.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    1X2 and Overs/Unders (Total 4.5)
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let ottaou45 of bets.onetimestwoandoverunder45" class="p-d-flex p-jc-between bet" (click)=selectedBet(ottaou45)>
+                    <div>{{ottaou45.team}}</div>
+                    <div>{{ottaou45.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    1X2 and Both Teams To Score
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let ottabtts of bets.onetimestwoandbothteamstoscore" class="p-d-flex p-jc-between bet" (click)=selectedBet(ottabtts)>
+                    <div>{{ottabtts.team}}</div>
+                    <div>{{ottabtts.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Which Team To Score
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let wtts of bets.whichteamtoscore" class="p-d-flex p-jc-between bet" (click)=selectedBet(wtts)>
+                    <div>{{wtts.team}}</div>
+                    <div>{{wtts.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Odd/Even
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let ooe of bets.oddoreven" class="p-d-flex p-jc-between bet" (click)=selectedBet(ooe)>
+                    <div>{{ooe.team}}</div>
+                    <div>{{ooe.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Exact Goals
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let exg of bets.exactgoals" class="p-d-flex p-jc-between bet" (click)=selectedBet(exg)>
+                    <div>{{exg.team}}</div>
+                    <div>{{exg.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Halftime/Fulltime
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let htft of bets.halftimefulltime" class="p-d-flex p-jc-between bet" (click)=selectedBet(htft)>
+                    <div>{{htft.team}}</div>
+                    <div>{{htft.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Winning Margin
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let wmrgn of bets.winningmargin" class="p-d-flex p-jc-between bet" (click)=selectedBet(wmrgn)>
+                    <div>{{wmrgn.team}}</div>
+                    <div>{{wmrgn.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Goals Range
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let grng of bets.goalsrange" class="p-d-flex p-jc-between bet" (click)=selectedBet(grng)>
+                    <div>{{grng.team}}</div>
+                    <div>{{grng.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Correct Score
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let crcts of bets.correctscore" class="p-d-flex p-jc-between bet" (click)=selectedBet(crcts)>
+                    <div>{{crcts.team}}</div>
+                    <div>{{crcts.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Highest Scoring Half
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let hsh of bets.highestscoringhalf" class="p-d-flex p-jc-between bet" (click)=selectedBet(hsh)>
+                    <div>{{hsh.team}}</div>
+                    <div>{{hsh.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Total & Both Teams To Score
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let tabtts of bets.totalandbothteamstoscore" class="p-d-flex p-jc-between bet" (click)=selectedBet(tabtts)>
+                    <div>{{tabtts.team}}</div>
+                    <div>{{tabtts.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Half/Full Correct Score
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let hfcs of bets.halffullcorrectscore" class="p-d-flex p-jc-between bet" (click)=selectedBet(hfcs)>
+                    <div>{{hfcs.team}}</div>
+                    <div>{{hfcs.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Both Halves Over 1.5
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let bho15 of bets.bothhalvesover15" class="p-d-flex p-jc-between bet" (click)=selectedBet(bho15)>
+                    <div>{{bho15.team}}</div>
+                    <div>{{bho15.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Both Halves Under 1.5
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let bhu15 of bets.bothhalvesunder15" class="p-d-flex p-jc-between bet" (click)=selectedBet(bhu15)>
+                    <div>{{bhu15.team}}</div>
+                    <div>{{bhu15.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    1st/2nd Half Both teams To Score
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let fshbts of bets.firstsecondhalfbothtoscore" class="p-d-flex p-jc-between bet" (click)=selectedBet(fshbts)>
+                    <div>{{fshbts.team}}</div>
+                    <div>{{fshbts.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Multigoals
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let mltg of bets.multigoals" class="p-d-flex p-jc-between bet" (click)=selectedBet(mltg)>
+                    <div>{{mltg.team}}</div>
+                    <div>{{mltg.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Multiscores
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let mltsc of bets.multiscores" class="p-d-flex p-jc-between bet" (click)=selectedBet(mltsc)>
+                    <div>{{mltsc.team}}</div>
+                    <div>{{mltsc.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="details-indv-content p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Double Chance & Both Teams to Score
+                </span>
+            </div>
+            <div class="three">
+                <div *ngFor="let dcabsc of bets.doublechanceandbothscore" class="p-d-flex p-jc-between bet cont" (click)=selectedBet(dcabsc)>
+                    <div>{{dcabsc.team}}</div>
+                    <div>{{dcabsc.bet}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

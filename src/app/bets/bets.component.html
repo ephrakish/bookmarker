@@ -1,0 +1,177 @@
+<!-- <div class="container bets-cont mt-2">
+    <div class="p-d-flex p-jc-center">
+        <p class="bet-league">English Premier League</p>
+    </div>
+    <div class="p-grid">
+        <div class="p-col p-d-flex p-jc-evenly p-ai-end">
+            <div class="">ID & time</div>
+            <div class="">game</div>
+        </div>
+        <div class="p-col-8 p-d-flex p-jc-evenly">
+            <div class=" ">
+                <div class="p-d-flex p-jc-center">3 way</div>
+                <div class="p-d-flex p-jc-around">
+                    <span>home</span>
+                    <span>draw</span>
+                    <span>away</span>
+                </div>
+            </div>
+            <div class=" ">
+                <div class="p-d-flex p-jc-center">double chance</div>
+                <div class="p-d-flex p-jc-around">
+                    <span>1/X</span>
+                    <span>X/2</span>
+                    <span>1/2</span>
+                </div>
+            </div>
+            <div class=" ">
+                <div class="p-d-flex p-jc-center">O/U 2.5</div>
+                <div class="p-d-flex p-jc-between">
+                    <span>over</span>
+                    <span>under</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngFor="let bet of bets">
+        <hr id="bottom-game">
+        <div class="p-grid">
+            <div  class="p-col p-d-flex p-jc-evenly">
+                <div class="bet-txt">
+                    <div>{{bet.id}}</div>
+                    <div class="bet-time">{{bet.time}}</div>
+                </div>
+                <div class="bet-txt">
+                    <div>{{bet.team_1 | uppercase}}</div>
+                    <div>{{bet.team_2 | uppercase}}</div>
+                </div>
+            </div>
+            <div  class="p-col-8  p-d-flex p-jc-evenly">
+                <div class=" p-d-flex p-jc-around p-ai-center">
+                    <span *ngFor="let b of bet.three" (click)=selectedBet(b) routerLinkActive="active" class="bet " >{{b.bet}}</span>
+                </div>
+                <div class=" p-d-flex p-jc-around p-ai-center">
+                    <span *ngFor="let d of bet.doublechance" (click)=selectedBet(d) routerLinkActive="active" class="bet ">{{d.bet}}</span>
+                </div>
+                <div class=" p-d-flex p-jc-around p-ai-center">
+                    <span *ngFor="let c of bet.overunder" (click)=selectedBet(c) routerLinkActive="active" class="bet ">{{c.bet}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="" style="border-radius: 5px;background: #102345; padding-bottom: 1px;">
+    <div>
+        <div class="row">
+            <div class="col" style="margin-top: 3px;margin-bottom: 3px;">
+                <h6 class="text-center m-auto" style="color: #ff8800;">English Premier League</h6>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-right: 3px;margin-left: 3px">
+        <div class="col" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;">
+            <div></div>
+        </div>
+        <div class="col-2" style="padding-left: 0;padding-right: 0;margin-left: 2px;margin-right: 2px;">
+            <div></div>
+        </div>
+        <div class="col-3 text-center" style="padding-left: 0px;padding-right: 0px;margin-right: 2px;margin-left: 2px;">
+            <div><span style="color: #a7a7a7;font-size: 14px;">3 way</span></div>
+        </div>
+        <div class="col-3" style="padding-left: 0px;padding-right: 0px;margin-left: 2px;margin-right: 2px;">
+            <div class="text-center"><span style="color: #a7a7a7;font-size: 14px;">Double Chance</span></div>
+        </div>
+        <div class="col-2" style="padding-right: 0px;padding-left: 0px;margin-right: 2px;margin-left: 2px;">
+            <div class="text-center" style="font-size: 14px;"><span style="color: #a7a7a7;">Over/ Under 2.5</span></div>
+        </div>
+        <div class="col" style="padding-bottom: 0;padding-left: 0;padding-right: 0;margin-right: 2px;margin-left: 2px;">
+            <div></div>
+        </div>
+    </div>
+    <div class="row" style="margin-right: 3px;margin-left: 3px">
+        <div class="col align-items-center align-content-around align-self-center" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;">
+            <p class="m-auto" style="color: #a7a7a7;font-size: 14px; padding-left: 2px;">Time</p>
+        </div>
+        <div class="col-2 align-items-center align-content-around align-self-center" style="padding-left: 0;padding-right: 0;margin-left: 2px;margin-right: 2px;">
+            <p class="text-left" style="color: #a7a7a7;margin-bottom: 0px;font-size: 14px;">Teams</p>
+        </div>
+        <div class="col-3 text-center align-self-center" style="padding-left: 0px;padding-right: 0px;margin-right: 2px;margin-left: 2px;">
+            <div class="row" style="margin-right: 0px;margin-left: 0px;">
+                <div class="col m-auto" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;margin-top: 4px;margin-bottom: 4px;">
+                    <p class="m-auto" style="color: #a7a7a7;font-size: 14px;">1</p>
+                </div>
+                <div class="col d-xl-flex justify-content-end align-items-center align-self-center justify-content-xl-center" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;margin-top: 4px;margin-bottom: 4px;">
+                    <p class="d-xl-flex align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center" style="color: #a7a7a7;font-size: 14px;">X</p>
+                </div>
+                <div class="col m-auto" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;margin-top: 4px;margin-bottom: 4px;">
+                    <p class="m-auto" style="color: #a7a7a7;font-size: 14px;">2</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 align-self-center" style="padding-left: 0px;padding-right: 0px;margin-left: 2px;margin-right: 2px;">
+            <div class="text-center"></div>
+            <div class="row" style="margin-right: 0px;margin-left: 0px;">
+                <div class="col m-auto" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;margin-top: 4px;margin-bottom: 4px;">
+                    <p class="text-center m-auto" style="color: #a7a7a7;font-size: 14px;">1 or X</p>
+                </div>
+                <div class="col d-xl-flex justify-content-end align-items-center align-self-center justify-content-xl-center" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;margin-top: 4px;margin-bottom: 4px;">
+                    <p class="d-xl-flex align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center" style="color: #a7a7a7;font-size: 14px;">X or 2</p>
+                </div>
+                <div class="col m-auto" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;margin-top: 4px;margin-bottom: 4px;">
+                    <p class="text-center m-auto" style="color: #a7a7a7;font-size: 14px;">1 or 2</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 align-self-center" style="padding-right: 0px;padding-left: 0px;margin-right: 2px;margin-left: 2px;">
+            <div class="row align-items-center" style="margin-right: 0px;margin-left: 0px;">
+                <div class="col m-auto" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;margin-top: 4px;margin-bottom: 4px;">
+                    <p class="text-center m-auto" style="color: #a7a7a7;font-size: 14px;">O 2.5</p>
+                </div>
+                <div class="col d-xl-flex justify-content-end align-items-center align-self-center justify-content-xl-center" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;margin-top: 4px;margin-bottom: 4px;">
+                    <p class="d-xl-flex align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center" style="color: #a7a7a7;font-size: 14px;">U 2.5</p>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="padding-bottom: 0;padding-left: 0;padding-right: 0;margin-right: 2px;margin-left: 2px;">
+            <div></div>
+        </div>
+    </div>
+    <hr style="margin-top: 2px;margin-bottom: 2px;">
+    <div *ngFor="let bet of bets" class="row" style="margin-top: 5px;margin-bottom: 5px;background: #0c101c;margin-right: 5px;margin-left: 5px;border-radius: 5px; padding: 2px 1px;">
+        <div class="col" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;">
+            <div class="bet-txt">
+                <div style="color: #cccccc;">{{bet.id}}</div>
+                <div class="bet-time">{{bet.time}}</div>
+            </div>
+        </div>
+        <div class="col-2 align-items-center align-content-around align-self-center" style="padding-left: 0;padding-right: 0;margin-left: 2px;margin-right: 2px;">
+            <p class="text-left" style="color: #cccccc;margin-bottom: 0px;font-size: 13px;">{{bet.team1}}</p>
+            <p class="text-left" style="color: #cccccc;margin-bottom: 0px;font-size: 13px;">{{bet.team2}}</p>
+        </div>
+        <div class="col-3 text-center align-self-center" style="padding-left: 0px;padding-right: 0px;margin-right: 3px;margin-left: 3px;">
+            <div class="row no-gutters row-cols-3 justify-content-between" style="margin-right: 0px;margin-left: 0px;background: #323c51;border-radius: 5px;">
+                <div *ngFor="let b of bet.three" (click)=selectedBet(b) routerLinkActive="active" class="col align-self-center m-auto" style="padding-right: 0;padding-left: 0;margin-right: 0px;margin-left: 0px;margin-top: 0px;margin-bottom: 0px;">
+                    <p class="rounded m-auto bet">{{b.bet}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 align-self-center" style="padding-left: 0px;padding-right: 0px;margin-left: 3px;margin-right: 3px;">
+            <div class="row" style="margin-right: 0px;margin-left: 0px;border-radius: 5px;background: #323c51;">
+                <div *ngFor="let d of bet.doublechance" (click)=selectedBet(d) routerLinkActive="active" class="col m-auto" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;margin-top: 2px;margin-bottom: 2px;">
+                    <p class="text-center rounded m-auto bet">{{d.bet}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 align-self-center" style="padding-left: 0px;padding-right: 0px;margin-left: 3px;margin-right: 3px;">
+            <div class="row" style="margin-right: 0px;margin-left: 0px;border-radius: 5px;background: #323c51;">
+                <div *ngFor="let c of bet.overunder05" (click)=selectedBet(c) routerLinkActive="active" class="col m-auto" style="padding-right: 0;padding-left: 0;margin-right: 2px;margin-left: 2px;margin-top: 2px;margin-bottom: 2px;">
+                    <p class="text-center rounded m-auto bet">{{c.bet}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col text-center align-self-center" style="padding-bottom: 0;padding-left: 0;padding-right: 0;margin-right: 2px;margin-left: 2px;">
+            <div><i  [routerLink]="['/game', bet._id]" class="pi pi-chevron-right details-navigator" style="color: #a7a7a7;"></i></div>
+    </div>
+</div>

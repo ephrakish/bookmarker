@@ -1,0 +1,145 @@
+.sports-list-contents {
+    background-color: #0F2244;
+    border-radius: 5px;
+    color: white;
+    padding: 0em;
+}
+
+.bet-list {
+    color: #FF237D;
+    padding-left: 1rem;
+}
+
+hr {
+    border-color: rgba(255, 255, 255, 0.301);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 90%;
+}
+
+#bottom-game {
+    border-color: rgba(255, 255, 255, 0.301);
+    margin-top: 0px;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+#game {
+    border-color: #FF237D;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 40%;
+    border-width: 2px;
+    
+}
+
+#games {
+    color: #FF237D;
+    padding: .3em;
+}
+
+.itm {
+    padding: 7px;
+}
+
+.lrn {
+    color: #0FAC53;
+    text-decoration: none;
+}
+
+.poss-win {
+    color: #FF8800;
+}
+
+.tt-odd {
+    color: #FFC400;
+}
+
+.odd {
+    color: #015023;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.input {
+    width: 50px;
+    border-radius: 3px;
+    border: none;
+
+}
+
+.cancelbet:hover {
+    cursor: pointer;
+}
+
+.bet-item {
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    color: black;
+}
+
+.bet-item-ctn {
+    background-color: #0B0F1A;
+    border-radius: 5px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-top: 0.3px;
+    padding-bottom: 0.3px;
+    font-size: small;
+}
+
+.stake-item {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.stake-item-right {
+    margin-left: 10em;
+}
+
+.btn-cl {
+    border: 0px;
+    background-color: #323C51;
+    border-radius: 3px;
+    color: #FF8800;
+}
+
+.btn-pl {
+    border: 0px;
+    background-color: #323C51;
+    border-radius: 3px;
+    color: #FF237D;
+}
+
+.btlist-odd-clr {
+    color: #015023;
+
+}
+
+.bld {
+    font-weight: bold;
+}
+
+.txt {
+    font-size: small;
+}
+
+.win {
+    color: #FF8800;
+}
+
+.odds {
+    color: #FFC400;
+}
+
+.empty-bet {
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+}

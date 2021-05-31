@@ -1,0 +1,89 @@
+.bets-cont {
+    border-radius: 5px;
+    background-color: #0F2244;
+    font-size: small;
+    color: #A7A7A7;
+}
+
+
+
+#bottom-game {
+    border-color: #ffffff4d;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+
+.bet {
+    background-color: #005285;
+    border-radius: 3px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: #FFFFFF;
+}
+.itm {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.bet:hover {
+    cursor: pointer;
+}
+
+.bet-time {
+    color: #FFC400;
+}
+
+.bet-league {
+    color: #FF8800;
+}
+
+
+
+
+
+
+
+
+.bet-txt {
+    color:white ;
+    font-size: 12px;
+    padding-left: 2px;
+}
+
+.bet:hover {
+    cursor: pointer;
+    background-color: #46536e;
+}
+
+.bet {
+    color: rgb(255,255,255);
+    background-color: #323c51;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-width: 0px;
+    font-size: 14px;
+}
+
+.active {
+    background-color: #0FAC53;
+}
+
+.details-navigator:hover {
+    cursor: pointer;
+}
+
+hr {
+    border-color: rgba(255, 255, 255, 0.151);
+}
+
+/* hr {
+    border-color: rgba(255, 255, 255, 0.301);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 100%;
+} */

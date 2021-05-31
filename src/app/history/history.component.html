@@ -1,0 +1,36 @@
+<div class="history">
+    <div class="p-d-flex p-jc-center history-contents">
+        <span class="color-yellow">BET HISTORY</span>
+    </div>
+    <div class="p-grid p-d-flex history-contents">
+        <span class="p-col p-d-flex p-jc-center">Game</span>
+        <span class="p-col p-d-flex p-jc-center">Pick</span>
+        <span class="p-col p-d-flex p-jc-center">Type</span>
+        <span class="p-col p-d-flex p-jc-center">Odds</span>
+        <span class="p-col p-d-flex p-jc-center">Result</span>
+    </div>
+    <hr class="hr">
+    <div *ngFor="let history of histories" class="history-contents">
+        <div *ngFor="let game of history.games">
+            <div class="p-grid">
+                <span class="p-col p-ai-center">
+                    <div class="p-d-flex p-jc-center">{{game.time}}</div>
+                    <div class="p-d-flex p-jc-center">{{game.teams}}</div>
+                </span>
+                <span class="p-col p-d-flex p-jc-center">{{game.pick}}</span>
+                <span class="p-col p-d-flex p-jc-center">{{game.type}}</span>
+                <span class="p-col p-d-flex p-jc-center">{{game.odds}}</span>
+                <span class="p-col p-d-flex p-jc-center"><a></a></span>
+            </div>
+            <hr class="hr">
+        </div>
+        <div class="p-grid">
+            <span class="p-col p-d-flex p-jc-center start-text">Betslip - <span class="color-yellow">{{history.betslip}}</span></span>
+            <span class="p-col p-d-flex p-jc-center start-text">Stake Amount - <span class="color-yellow">{{history.stake}}</span></span>
+            <span class="p-col p-d-flex p-jc-center start-text">Expected Outcome - <span class="color-yellow">{{history.expectedoutcome}}</span></span>
+            <span class="p-col p-d-flex p-jc-center start-text">Total Odds - <span class="color-yellow">{{history.totalodds}}</span></span>
+            <span class="p-col p-d-flex p-jc-center start-text"><a></a></span>
+        </div>
+    </div>
+    <hr class="hr">
+</div>

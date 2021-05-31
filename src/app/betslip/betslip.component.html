@@ -1,0 +1,65 @@
+<div class="sports-list-contents">
+    <div class="p-d-flex p-jc-around" id="games">
+        <div class="">Bet Slip</div>
+        <div class="">
+            <a class="bet-list">
+            ({{bets.length}})
+            </a>
+        </div>
+    </div>
+    <hr id="bottom-game">
+    <div class=""  *ngIf="bets.length > 0">
+        <div class="bet-item-ctn p-ml-2 p-mr-2">
+            <div *ngFor="let bet of bets" class="p-d-flex p-jc-between bet-item">
+                <div class="">
+                    <div>{{bet.teams}}</div>
+                    <div>
+                        <a class="bld p-d-flex p-ai-center">
+                            <img src="../../assets/images/baseline-radio_button_checked-24px.svg"  width="15" height="15">
+                            {{bet.team}}
+                        </a>
+                    </div>
+                    <div>{{bet.cat}}</div>
+                </div>
+                <div class="p-d-flex p-flex-column">
+                    <a (click)="clearBet(bet)" class="cancelbet">
+                        <img src="../../assets/images/baseline-clear-24px.svg"  width="20" height="20">
+                    </a>
+                    <div class="p-mt-auto odd">{{bet.bet}}</div>
+                </div>
+            </div>
+        </div>
+        <hr id="bottom-game">
+        <div class="container itm">
+            <div class="p-d-flex p-jc-between">
+                <span class="">Total Odds</span>
+                <span class="tt-odd">{{totalodds}}</span>
+            </div>
+            <div class="p-d-flex p-jc-between">
+                <span class="">Stake Amount</span>
+                <input class="input" [(ngModel)]="stake" (ngModelChange)="changePossibleWin()">
+            </div>
+            <div class="p-d-flex p-jc-between">
+                <span class="">Possible Win</span>
+                <span class=" poss-win">{{possiblewin}}</span>
+            </div>
+        </div>
+        <hr id="bottom-game">
+        <div class="container itm">
+            <div class="p-d-flex p-jc-center">
+                <button class="btn-pl" (click)="placeBet()">Place bet</button>
+            </div>
+            <div class="p-d-flex p-jc-center p-mt-2">
+                <button class="btn-cl">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="bets.length === 0">
+        <div class="empty-bet p-mr-2 p-ml-2 p-mt-2 p-mb-2">
+            <p class="p-d-flex p-jc-center text-center">Bets not selected</p>
+            <p class="p-d-flex p-jc-center text-center">Please pick a bet by clicking</p>
+            <a class="p-d-flex p-jc-center text-center lrn" routerLink="help">Learn How</a>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.nav-cont {
+    border-radius: 5px;
+    background-color: #0F2244;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+a {
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+ul {
+    margin: 0em;
+}
+
+.active {
+    color: #FF8800;
+    border-bottom: 2px solid #FF8800;
+}
+
+

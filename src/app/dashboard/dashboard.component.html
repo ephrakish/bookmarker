@@ -1,0 +1,424 @@
+<div class="details">
+    <div class="details-head">
+        <div class="p-d-flex p-jc-center">
+            <div><input class="title" [(ngModel)]="bets.team_1">   vs   <input class="title" [(ngModel)]="bets.team_2"></div>
+        </div>
+        <div class="p-d-flex p-jc-center p-mt-1">
+            <input [(ngModel)]="bets.date">
+        </div>
+        <div class="p-d-flex p-jc-center p-mt-1">
+            <input [(ngModel)]="bets.time">
+        </div>
+        <div class="p-d-flex p-jc-center p-mt-1">
+            <button (click)="creatBet()">Submit</button>
+        </div>
+    </div>
+</div>
+<div class="details p-mt-2">
+    <div class="details-content">
+        <div class="cont">
+            <div class="cont-head">
+                <span>
+                    Threeway
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let three of bets.three" class="p-d-flex p-jc-between bet bet">
+                    <div>{{three.team}}</div>
+                    <input [(ngModel)]="three.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Double chance
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let double of bets.doublechance" class="p-d-flex p-jc-between bet bet">
+                    <div>{{double.team}}</div>
+                    <input [(ngModel)]="double.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Over/Under 0.5
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let over of bets.overunder05" class="p-d-flex p-jc-between bet">
+                    <div>{{over.team}}</div>
+                    <input [(ngModel)]="over.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Over/Under 1.5
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let ou15 of bets.overunder15" class="p-d-flex p-jc-between bet">
+                    <div>{{ou15.team}}</div>
+                    <input [(ngModel)]="ou15.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Over/Under 2.5
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let ou25 of bets.overunder25" class="p-d-flex p-jc-between bet">
+                    <div>{{ou25.team}}</div>
+                    <input [(ngModel)]="ou25.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Over/Under 3.5
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let ou35 of bets.overunder35" class="p-d-flex p-jc-between bet">
+                    <div>{{ou35.team}}</div>
+                    <input [(ngModel)]="ou35.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Over/Under 4.5
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let ou45 of bets.overunder45" class="p-d-flex p-jc-between bet">
+                    <div>{{ou45.team}}</div>
+                    <input [(ngModel)]="ou45.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Both To Score
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let bts of bets.bothtoscore" class="p-d-flex p-jc-between bet">
+                    <div>{{bts.team}}</div>
+                    <input [(ngModel)]="bts.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Draw No Bet
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let dnb of bets.drawnobet" class="p-d-flex p-jc-between bet">
+                    <div>{{dnb.team}}</div>
+                    <input [(ngModel)]="dnb.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Handicap -05
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let hc5 of bets.Handicap05" class="p-d-flex p-jc-between bet">
+                    <div>{{hc5.team}}</div>
+                    <input [(ngModel)]="hc5.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    1X2 and Overs/Unders (Total 1.5)
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let ottaou15 of bets.onetimestwoandoverunder15" class="p-d-flex p-jc-between bet">
+                    <div>{{ottaou15.team}}</div>
+                    <input [(ngModel)]="ottaou15.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    1X2 and Overs/Unders (Total 2.5)
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let ottaou25 of bets.onetimestwoandoverunder25" class="p-d-flex p-jc-between bet">
+                    <div>{{ottaou25.team}}</div>
+                    <input [(ngModel)]="ottaou25.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    1X2 and Overs/Unders (Total 3.5)
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let ottaou35 of bets.onetimestwoandoverunder35" class="p-d-flex p-jc-between bet">
+                    <div>{{ottaou35.team}}</div>
+                    <input [(ngModel)]="ottaou35.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    1X2 and Overs/Unders (Total 4.5)
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let ottaou45 of bets.onetimestwoandoverunder45" class="p-d-flex p-jc-between bet">
+                    <div>{{ottaou45.team}}</div>
+                    <input [(ngModel)]="ottaou45.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    1X2 and Both Teams To Score
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let ottabtts of bets.onetimestwoandbothteamstoscore" class="p-d-flex p-jc-between bet">
+                    <div>{{ottabtts.team}}</div>
+                    <input [(ngModel)]="ottabtts.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Which Team To Score
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let wtts of bets.whichteamtoscore" class="p-d-flex p-jc-between bet">
+                    <div>{{wtts.team}}</div>
+                    <input [(ngModel)]="wtts.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Odd/Even
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let ooe of bets.oddoreven" class="p-d-flex p-jc-between bet">
+                    <div>{{ooe.team}}</div>
+                    <input [(ngModel)]="ooe.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Exact Goals
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let exg of bets.exactgoals" class="p-d-flex p-jc-between bet">
+                    <div>{{exg.team}}</div>
+                    <input [(ngModel)]="exg.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Halftime/Fulltime
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let htft of bets.halftimefulltime" class="p-d-flex p-jc-between bet">
+                    <div>{{htft.team}}</div>
+                    <input [(ngModel)]="htft.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Winning Margin
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let wmrgn of bets.winningmargin" class="p-d-flex p-jc-between bet">
+                    <div>{{wmrgn.team}}</div>
+                    <input [(ngModel)]="wmrgn.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Goals Range
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let grng of bets.goalsrange" class="p-d-flex p-jc-between bet">
+                    <div>{{grng.team}}</div>
+                    <input [(ngModel)]="grng.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Correct Score
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let crcts of bets.correctscore" class="p-d-flex p-jc-between bet">
+                    <div>{{crcts.team}}</div>
+                    <input [(ngModel)]="crcts.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Highest Scoring Half
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let hsh of bets.highestscoringhalf" class="p-d-flex p-jc-between bet">
+                    <div>{{hsh.team}}</div>
+                    <input [(ngModel)]="hsh.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Total & Both Teams To Score
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let tabtts of bets.totalandbothteamstoscore" class="p-d-flex p-jc-between bet">
+                    <div>{{tabtts.team}}</div>
+                    <input [(ngModel)]="tabtts.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Half/Full Correct Score
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let hfcs of bets.halffullcorrectscore" class="p-d-flex p-jc-between bet">
+                    <div>{{hfcs.team}}</div>
+                    <input [(ngModel)]="hfcs.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Both Halves Over 1.5
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let bho15 of bets.bothhalvesover15" class="p-d-flex p-jc-between bet">
+                    <div>{{bho15.team}}</div>
+                    <input [(ngModel)]="bho15.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Both Halves Under 1.5
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let bhu15 of bets.bothhalvesunder15" class="p-d-flex p-jc-between bet">
+                    <div>{{bhu15.team}}</div>
+                    <input [(ngModel)]="bhu15.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    1st/2nd Half Both teams To Score
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let fshbts of bets.firstsecondhalfbothtoscore" class="p-d-flex p-jc-between bet">
+                    <div>{{fshbts.team}}</div>
+                    <input [(ngModel)]="fshbts.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Multigoals
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let mltg of bets.multigoals" class="p-d-flex p-jc-between bet">
+                    <div>{{mltg.team}}</div>
+                    <input [(ngModel)]="mltg.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Multiscores
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let mltsc of bets.multiscores" class="p-d-flex p-jc-between bet">
+                    <div>{{mltsc.team}}</div>
+                    <input [(ngModel)]="mltsc.bet">
+                </div>
+            </div>
+        </div>
+        <div class="cont p-mt-2">
+            <div class="cont-head">
+                <span>
+                    Double Chance & Both Teams to Score
+                </span>
+            </div>
+            <div class="two">
+                <div *ngFor="let dcabsc of bets.doublechanceandbothscore" class="p-d-flex p-jc-between bet">
+                    <div>{{dcabsc.team}}</div>
+                    <input [(ngModel)]="dcabsc.bet">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

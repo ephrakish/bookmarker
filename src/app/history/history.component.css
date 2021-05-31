@@ -1,0 +1,20 @@
+div.history {
+    border-radius: 5px;
+    background-color: #0F2244;
+    color: #FFFF;
+    padding-top: .7em;
+    padding-bottom: .7em;
+}
+
+.history-contents {
+    padding-left: .7em;
+    padding-right: .7em;
+}
+
+.start-text {
+    font-size: small;
+}
+
+.color-yellow {
+    color: #FF8800;
+}

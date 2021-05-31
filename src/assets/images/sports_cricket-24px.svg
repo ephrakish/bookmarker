@@ -1,0 +1,25 @@
+<svg id="sports_cricket-24px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #ff3e3e;
+      }
+    </style>
+  </defs>
+  <g id="Group_23" data-name="Group 23">
+    <rect id="Rectangle_4" data-name="Rectangle 4" class="cls-1" width="24" height="24"/>
+  </g>
+  <g id="Group_26" data-name="Group 26">
+    <g id="Group_25" data-name="Group 25">
+      <g id="Group_24" data-name="Group 24">
+        <path id="Path_16" data-name="Path 16" class="cls-2" d="M15.05,12.81,6.56,4.32a1,1,0,0,0-1.41,0L2.32,7.15a1,1,0,0,0,0,1.41l8.49,8.49a1,1,0,0,0,1.41,0l2.83-2.83A1,1,0,0,0,15.05,12.81Z"/>
+        <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-2" width="2" height="6" transform="translate(14.341 17.756) rotate(-45)"/>
+      </g>
+      <circle id="Ellipse_2" data-name="Ellipse 2" class="cls-2" cx="3.5" cy="3.5" r="3.5" transform="translate(15 2)"/>
+    </g>
+  </g>
+</svg>

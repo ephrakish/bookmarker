@@ -1,0 +1,45 @@
+div.details {
+    border-radius: 5px;
+    background-color: #0F2244;
+    color: #D2D2D2;
+}
+
+div.cont {
+    border-radius: 5px;
+    background-color: #323C51;
+}
+div.cont-head {
+    background-color: #0B0F1A;
+    padding: .5em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+div.two {
+    column-count: auto;
+    column-rule: 2px solid #0F2244;
+}
+
+.title {
+    color: black;
+    border-radius: 3px;
+    border: none;
+    width: fit-content;
+}
+
+.bet {
+    padding: .5em;
+}
+
+div.details-head {
+    padding: .7em;
+    border-radius: 5px;
+}
+
+div.details-content {
+    padding: .4em;
+}
+
+.active {
+    background-color: #0FAC53;
+}

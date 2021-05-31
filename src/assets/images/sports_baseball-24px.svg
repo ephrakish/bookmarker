@@ -1,0 +1,29 @@
+<svg id="sports_baseball-24px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Group_6" data-name="Group 6">
+    <rect id="Rectangle_2" data-name="Rectangle 2" class="cls-1" width="24" height="24"/>
+  </g>
+  <g id="Group_11" data-name="Group 11">
+    <g id="Group_10" data-name="Group 10">
+      <g id="Group_7" data-name="Group 7">
+        <path id="Path_5" data-name="Path 5" class="cls-2" d="M3.81,6.28a9.943,9.943,0,0,0,0,11.44,6,6,0,0,0,0-11.44Z"/>
+      </g>
+      <g id="Group_8" data-name="Group 8">
+        <path id="Path_6" data-name="Path 6" class="cls-2" d="M20.19,6.28a6,6,0,0,0,0,11.44,9.943,9.943,0,0,0,0-11.44Z"/>
+      </g>
+      <g id="Group_9" data-name="Group 9">
+        <path id="Path_7" data-name="Path 7" class="cls-2" d="M14,12a8,8,0,0,1,4.79-7.33,9.969,9.969,0,0,0-13.58,0,8,8,0,0,1,0,14.66,9.969,9.969,0,0,0,13.58,0A8,8,0,0,1,14,12Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
